@@ -12,6 +12,6 @@ export const GetPhotosRest = async () => {
     }
 
     console.log('통신 날려따')
-    const {data} = axios(config);
+    // const {data} = axios(config);  ...data 리턴하면 undefined로 나옴...
     return axios(config);
 }
