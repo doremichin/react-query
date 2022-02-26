@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import {useQuery} from "react-query";
 import {getPhotosRest} from "../../../api/react-query/getPhotosRest";
+import LoadingSpinner from "../../_shared/Item/LoadingSpinner";
 
 const ReactQueryContainer = () => {
 
@@ -13,7 +14,7 @@ const ReactQueryContainer = () => {
         }
     )
     const items = data?.data;
-    if(isLoading) return '로딩중이지롱'
+    if(isLoading) return <LoadingSpinner/>
 
     if(isFetching) return '??'
 

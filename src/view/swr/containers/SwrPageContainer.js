@@ -6,6 +6,7 @@ import MainList from "../../_shared/List/MainList";
 import SwrPhotoItem from "../components/SwrPhotoItem";
 import Pagination from "../../_shared/Item/Pagination";
 import PerPageFilter from "../../_shared/Item/PerPageFilter";
+import LoadingSpinner from "../../_shared/Item/LoadingSpinner";
 
 const SwrPageContainer = () => {
     const [pageIndex ,setPageIndex] = useState(1);
@@ -13,7 +14,7 @@ const SwrPageContainer = () => {
 
     const { data  } = useSWR(`https://api.unsplash.com/photos?page=${pageIndex}&per_page=${perPage}`, getPostsSWR);
 
-    if(!data) return "Loading....";
+    if(!data) return <LoadingSpinner/>
 
     return(
         <Container>
