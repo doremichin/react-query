@@ -39,6 +39,9 @@ export const GlobalStyle = createGlobalStyle`
   blockquote, q {
     quotes: none;
   }
+  img{
+    width: 100%;
+  }
 
   blockquote:before, blockquote:after,
   q:before, q:after {
