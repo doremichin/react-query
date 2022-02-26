@@ -2,7 +2,7 @@ import axios from "axios";
 
 // 9uH0ga_2N_JoXWka26ApbWbNp2nELHC8CMtPKi6B7AA
 
-export const GetPhotosRest = async () => {
+export const getPhotosRest = async () => {
     const config = {
         method : 'get',
         url :'https://jsonplaceholder.typicode.com/todos',
