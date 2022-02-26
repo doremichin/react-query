@@ -7,6 +7,7 @@ const Header = () => {
             <Nav>
                 <NavItem to={'/'}>React-Query</NavItem>
                 <NavItem to={'/swr'}>SWR</NavItem>
+                <NavItem to={'/swr-page'}>SWR-Page</NavItem>
             </Nav>
         </Container>
     )
