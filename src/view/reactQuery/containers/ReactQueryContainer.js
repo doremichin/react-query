@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {useQuery} from "react-query";
 import {GetPhotosRest} from "../../../api/getPhotosRest";
 
-const MainContainer = () => {
+const ReactQueryContainer = () => {
 
     const {isLoading, error, data, isFetching} = useQuery(
         'getPhoto',
@@ -17,11 +17,9 @@ const MainContainer = () => {
 
     if(isFetching) return '??'
 
-    console.log(items)
-
     return(
         <Container>
-            MainContainer
+            {items.map((item,index) => <Todo key={index}>{item.title}</Todo>)}
         </Container>
     )
 };
@@ -29,5 +27,7 @@ const MainContainer = () => {
 const Container = styled.div`
 
 `;
-
-export default MainContainer;
+const Todo = styled.div`
+  
+`;
+export default ReactQueryContainer;

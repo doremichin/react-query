@@ -1,10 +1,13 @@
 import styled from 'styled-components'
-import Main from "./page/Main";
+import ReactQuery from "./page/ReactQuery";
 import {
     QueryClient,
     QueryClientProvider,
 } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import Header from "./view/_shared/header";
+import {GlobalStyle} from "./style/GlobalStyle";
+import Routers from "./Routers";
 
 
 const queryClient = new QueryClient()
@@ -12,8 +15,10 @@ const queryClient = new QueryClient()
 const App = () => {
     return(
         <QueryClientProvider client={queryClient}>
+            <GlobalStyle/>
             <Container>
-                <Main/>
+                <Header/>
+                <Routers/>
             </Container>
             <ReactQueryDevtools initialIsOpen={false}/>
         </QueryClientProvider>
