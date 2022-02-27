@@ -5,6 +5,7 @@ const Header = () => {
     return(
         <Container>
             <Nav>
+                <NavItem to={'/add'}>Add-Post</NavItem>
                 <NavItem to={'/'}>React-Query</NavItem>
                 <NavItem to={'/swr'}>SWR</NavItem>
                 <NavItem to={'/swr-page'}>SWR-Page</NavItem>
