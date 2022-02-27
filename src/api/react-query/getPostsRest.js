@@ -2,10 +2,10 @@ import axios from "axios";
 
 // 9uH0ga_2N_JoXWka26ApbWbNp2nELHC8CMtPKi6B7AA
 
-export const getPhotosRest = async () => {
+export const getPostsRest = async (id) => {
     const config = {
         method : 'get',
-        url :'https://jsonplaceholder.typicode.com/todos',
+        url : id ? `https://jsonplaceholder.typicode.com/posts/${id}` : `https://jsonplaceholder.typicode.com/posts/`,
         // headers : {
         //     Authorization: 'Client-ID 9uH0ga_2N_JoXWka26ApbWbNp2nELHC8CMtPKi6B7AA'
         // }
